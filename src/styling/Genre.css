@@ -1,0 +1,198 @@
+.genre-select {
+  position: relative;
+  display: inline;
+}
+
+.grid-align {
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+}
+
+.grid {
+  display: inline-block;
+  margin: 2.5% auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-sizer, .grid-item {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  overflow: hidden;
+  display: inline;
+  position: relative;
+  padding: 1px;
+  margin: 0 auto;
+}
+
+.genre-back {
+  background-color: rgba(25, 25, 25, 0.9);
+  height: 95px;
+  width: 95px;
+  color: #ede7e3;
+  position: absolute;
+  margin-top: -100px;
+  text-align: center;
+  visibility: hidden;
+}
+
+.genre-text {
+  font-size: 8px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .grid-sizer, .grid-item {
+    height: 45px;
+    width: 45px;
+  }
+
+  .genre-back {
+    height: 45px;
+    width: 45px;
+    margin-top: -45px;
+  }
+
+  .genre-text {
+    font-size: .6rem;
+    padding: 30% 5%;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .grid-sizer, .grid-item {
+    height: 60px;
+    width: 60px;
+  }
+
+  .genre-back {
+    height: 60px;
+    width: 60px;
+    margin-top: -60px;
+  }
+
+  .genre-text {
+    font-size: .8rem;
+    padding: 32.5% 5%;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 574px) {
+  .grid-sizer, .grid-item {
+    height: 75px;
+    width: 75px;
+  }
+
+  .genre-back {
+    height: 75px;
+    width: 75px;
+    margin-top: -75px;
+  }
+
+  .genre-text {
+    font-size: .9rem;
+    padding: 35% 5%;
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 767px) {
+  .grid-sizer, .grid-item {
+    height: 95px;
+    width: 95px;
+  }
+
+  .genre-back {
+    height: 95px;
+    width: 95px;
+    margin-top: -95px;
+  }
+
+  .genre-text {
+    font-size: .9rem;
+    padding: 35% 5%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .grid-sizer, .grid-item {
+    height: 110px;
+    width: 110px;
+  }
+
+  .genre-back {
+    height: 110px;
+    width: 110px;
+    margin-top: -110px;
+  }
+
+  .genre-text {
+    font-size: 1.25rem;
+    padding: 37.5% 5%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .grid-sizer, .grid-item {
+    height: 130px;
+    width: 130px;
+  }
+
+  .genre-back {
+    height: 130px;
+    width: 130px;
+    margin-top: -130px;
+  }
+
+  .genre-text {
+    font-size: 1.5rem;
+    padding: 37.5% 5%;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1749px) {
+  .grid-sizer, .grid-item {
+    height: 160px;
+    width: 160px;
+  }
+
+  .genre-back {
+    height: 160px;
+    width: 160px;
+    margin-top: -160px;
+  }
+
+  .genre-text {
+    font-size: 2rem;
+    padding: 40% 5%;
+  }
+}
+
+@media screen and (min-width: 1750px) {
+  .grid-sizer, .grid-item {
+    height: 200px;
+    width: 200px;
+  }
+
+  .genre-back {
+    height: 200px;
+    width: 200px;
+    margin-top: -200px;
+  }
+}
+
+@media screen and (min-width: 1750px) and (max-width: 1999px) {
+  .genre-text {
+    font-size: 2rem;
+    padding: 40% 5%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .genre-text {
+    font-size: 3rem;
+    padding: 42.5% 5%;
+  }
+}

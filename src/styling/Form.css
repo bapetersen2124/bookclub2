@@ -1,0 +1,195 @@
+.form {
+  height: 100%;
+  position: absolute;
+  display: inline;
+  visibility: hidden;
+  z-index: 6;
+}
+
+.t-body {
+  width: 100%;
+}
+
+.field {
+  width: 100%;
+  margin: 2.5% 0%;
+  height: 12.5px;
+}
+
+.tr-style {
+  width: auto;
+  margin: 0%;
+}
+
+.td-full {
+  width: 100%;
+}
+
+.td-style {
+  width: 20px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.label {
+  text-align: center;
+  color: #f5f1e4;
+  margin: 0%;
+  font-family: 'Open Sans';
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button-style {
+  width: 30%;
+  margin: 0 5%;
+  padding: 1% 5%;
+  margin-top: 10%;
+  font-family: 'Open Sans';
+  border: 1px solid black;
+  border-radius: 50px;
+  position: relative;
+  z-index: 6;
+}
+
+/* media queries */
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .form {
+    margin: -25% 35%;
+  }
+
+  .label {
+    font-size: .75rem;
+  }
+
+  .button-style {
+    font-size: .75rem;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .form {
+    margin: -25% 35%;
+  }
+
+  .label {
+    font-size: .85rem;
+  }
+
+  .button-style {
+    font-size: .75rem;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 574px) {
+  .form {
+    margin: -23% 35%;
+    padding: 1% 0%;
+  }
+
+  .label {
+    font-size: .85rem;
+  }
+
+  .button-style {
+    font-size: .75rem;
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 767px) {
+  .form {
+    margin: -20% 35%;
+    padding: 1% 0%;
+  }
+
+  .label {
+    font-size: .95rem;
+  }
+
+  .button-style {
+    font-size: .95rem;
+  }
+
+  .field {
+    height: 17.5px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .form {
+    margin: -15% 35%;
+    padding: 1% 0%;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+
+  .field {
+    height: 20px;
+  }
+
+  .button-style {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .form {
+    margin: -17% 35%;
+    padding: 1% 0%;
+  }
+
+  .label {
+    font-size: 1.5rem;
+  }
+
+  .field {
+    height: 35px;
+  }
+
+  .button-style {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1999px) {
+  .form {
+    margin: -18.5% 35%;
+    padding: 1% 0%;
+  }
+
+  .label {
+    font-size: 2rem;
+  }
+
+  .field {
+    height: 45px;
+  }
+
+  .button-style {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .form {
+    margin: -15% 35%;
+    padding: 1% 0%;
+  }
+
+  .label {
+    font-size: 2.5rem;
+  }
+
+  .field {
+    height: 60px;
+  }
+
+  .button-style {
+    font-size: 2.5rem;
+  }
+}

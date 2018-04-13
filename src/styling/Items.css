@@ -1,0 +1,22 @@
+.book-list {
+  display: inline-block;
+  background-color: #e3dad3;
+  position: relative;
+  z-index: -1;
+  padding: 2.5% 0% 1.5% 2.5%;
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  margin: 0;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.item-listing{
+  width: 25%;
+  display: inline-block;
+  position: relative;
+}

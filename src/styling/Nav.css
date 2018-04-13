@@ -1,0 +1,132 @@
+.nav-background {
+  background-color: rgba(25, 25, 25, 0.9);
+  height: fit-content;
+  width: 30%;
+  margin: 0;
+  margin-top: 10%;
+  position: absolute;
+  text-decoration: none;
+  list-style: none;
+  left: 0;
+  padding: 5% 0%;
+}
+
+.sticky-outer-wrapper {
+  height: 0
+}
+
+.icon {
+  width: 100%;
+  font-family: 'Libre Barcode 128 Text';
+  font-size: 1.15rem;
+  color: #f5f1e4;
+  text-decoration: none;
+  position: relative;
+  list-style: none;
+  text-align: center;
+  /* letter-spacing: .1em; */
+  padding: 0;
+  margin: 0 auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0 auto;
+  text-decoration: none;
+  list-style: none;
+}
+
+.menu {
+  font-family: 'Open Sans';
+  font-size: 1.15rem;
+  color: #f5f1e4;
+  text-decoration: none;
+  position: relative;
+  list-style: none;
+  text-align: center;
+  letter-spacing: .1em;
+  padding: 0;
+  margin: 0 auto;
+}
+
+li:hover {
+  transform: scale(1.02);
+  filter: brightness(1);
+  font-weight: 800;
+}
+
+
+/* media queries */
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .icon {
+    font-size: 1em
+  }
+
+  li {
+    font-size: .6rem;
+    line-height: 1.25rem
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .icon {
+    font-size: 1.25em
+  }
+
+  li {
+    font-size:.8rem;
+    line-height: 1.5rem
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .icon {
+    font-size: 1.5em
+  }
+
+  li {
+    font-size: .9rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .icon {
+    font-size: 2.75rem;
+  }
+
+  li {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .icon {
+    font-size: 3em
+  }
+
+  li {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1999px) {
+  .icon {
+    font-size: 3.75em
+  }
+
+  li {
+    font-size: 2rem;
+    line-height: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .icon {
+    font-size: 5.5em
+  }
+
+  li {
+    font-size: 3rem;
+    line-height: 6rem;
+  }
+}

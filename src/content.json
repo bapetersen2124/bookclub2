@@ -1,0 +1,39 @@
+{
+	"genres": [{
+			"id": 0,
+			"image": "fantasy"
+		},
+		{
+			"id": 1,
+			"image": "fiction"
+		},
+		{
+			"id": 2,
+			"image": "historical-fiction"
+		},
+		{
+			"id": 3,
+			"image": "mystery"
+		},
+		{
+			"id": 4,
+			"image": "novel"
+		},
+		{
+			"id": 5,
+			"image": "poetry"
+		},
+		{
+			"id": 6,
+			"image": "science-fiction"
+		},
+		{
+			"id": 7,
+			"image": "thriller"
+		},
+		{
+			"id": 8,
+			"image": "YA"
+		}
+	]
+}

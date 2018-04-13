@@ -1,0 +1,38 @@
+.sort-list {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.span-background {
+  background-color: #f3f0ed;
+  position: relative;
+  z-index: -1;
+}
+
+.listing{
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.row {
+  margin: 0;
+  position: relative;
+  z-index: -1;
+  display: inline-block;
+  width: 100%;
+}
+
+.image-icon {
+  width: 12.5%;
+  height: auto;
+  padding: 0% 2%;
+  position: relative;
+  z-index: 0;
+  margin: 6%;
+  display: inline-block;
+}
