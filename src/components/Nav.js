@@ -16,19 +16,17 @@ export default class Nav extends Component {
         zIndex: 3
       })
     })
+    // $(".form-fill").click(function() {
+    //   window.TweenMax.to(".grid", 1, {
+    //     width: "100%",
+    //     zIndex: -1,
+    //     delay: -.5
+    //   })
+    // })
     $(".form-fill").click(function() {
-      window.TweenMax.to(".grid", 1, {
-        width: "100%",
-        zIndex: -1,
-        delay: -.5
-      })
-    })
-    $(".form-fill").click(function() {
-      window.TweenMax.fromTo(".menu", 1, {
+      window.TweenMax.to(".menu", 1, {
       }, {
-        marginLeft: 0,
-        width: "30%",
-        delay: 1.25,
+        delay: 1.25
       })
     })
     $(".form-fill").click(function() {
@@ -55,24 +53,24 @@ export default class Nav extends Component {
       zIndex: -1
     })
   })
-  $("#cancel, #submit").click(function() {
-    window.TweenMax.to(".grid", 1, {
-      display: "inline-block",
-      margin: "2.5% auto",
-      position: "relative",
-      overflow: "hidden",
-      delay: 1.75,
-      zIndex: 1
-    })
-  })
+  // $("#cancel, #submit").click(function() {
+  //   window.TweenMax.to(".grid", 1, {
+  //     display: "inline-block",
+  //     margin: "2.5% auto",
+  //     position: "relative",
+  //     overflow: "hidden",
+  //     delay: 1.75,
+  //     zIndex: 1
+  //   })
+  // })
   $(".nav-item").mouseover(function() {
-    window.TweenMax.to($(this), .35, {
-      marginLeft: "5%"
+    window.TweenMax.to($(this), .5, {
+      marginLeft: "10px"
     })
   })
   $(".nav-item").mouseout(function() {
-    window.TweenMax.to($(this), .35, {
-      marginLeft: "0%"
+    window.TweenMax.to($(this), .5, {
+      marginLeft: "0px"
     })
   })
 }
