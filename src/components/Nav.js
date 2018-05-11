@@ -65,7 +65,17 @@ export default class Nav extends Component {
       zIndex: 1
     })
   })
-  }
+  $(".nav-item").mouseover(function() {
+    window.TweenMax.to($(this), .35, {
+      marginLeft: "5%"
+    })
+  })
+  $(".nav-item").mouseout(function() {
+    window.TweenMax.to($(this), .35, {
+      marginLeft: "0%"
+    })
+  })
+}
 
   render() {
     return(
@@ -78,10 +88,10 @@ export default class Nav extends Component {
           <div>&nbsp;</div>
           <div className="menu">
             <ul>
-              <li>Home</li>
-              <li className="form-fill">Add a Listing</li>
-              <li>Search By Category</li>
-              <li>Search By User</li>
+              <li className="nav-item">Home</li>
+              <li className="form-fill nav-item">Add a Listing</li>
+              <li className="nav-item">Search By Category</li>
+              <li className="nav-item">Search By User</li>
             </ul>
           </div>
           <div>

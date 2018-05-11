@@ -1,0 +1,1316 @@
+{lang = TO_LANG ? TO_LANG : profile.vars.preferred_language}
+{lang = lower(lang)}
+
+{if lang == 'de'}
+{preheader = "Schau dir deine Erfolge aus Saison 3 an!"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "Hey "},
+{intro = "Danke, dass du Fortnite Battle Royale Saison 3 gespielt hast. Wir hatten eine Menge Spaß mit Raketenritten, Astronauten, Replay-Videos, Tanzwettbewerben und mehr. Sieh dir an, was du in Saison 3 alles erreicht hast."},
+{if profile.vars.playstyle== "soldier"}
+{playstyle = "Soldat"}
+{subject = "Du bist ein ausgezeichneter " + playstyle + ", schau dir deine Statistik in Saison 3 an!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "Eliminierungen diese Saison gesamt"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "Höchste Anzahl Eliminierungen in einem einzelnen Match"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "Am weitesten entfernte Eliminierung"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "Baumeister"}
+{subject = "Du bist ein ausgezeichneter " + playstyle + ", schau dir deine Statistik in Saison 3 an!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "Errichtete Gebäude gesamt"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "Gesammelte Ressourcen gesamt"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "Fallen-Eliminierungen gesamt"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "Späher"}
+{subject = "Du bist ein ausgezeichneter " + playstyle + ", schau dir deine Statistik in Saison 3 an!"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "Prozent der Karte erkundet"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "Zurückgelegte Distanz gesamt"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "Gegenstände durchsucht gesamt"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "Insgesamt gespielte Spiele"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "Lieblingswaffe"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "Sturmgewehr"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "Maschinenpistole"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "Maschinengewehr"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "Revolver"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "Pistole"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "Handkanone"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "Schrotflinte"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "Scharfschützengewehr"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "Jagdgewehr"}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "Armbrust"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "Minigun"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "Raketenwerfer"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "Ferngelenkte Rakete"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "Granatwerfer"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "Lieblingslandeplatz"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "Anarchy Acres"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "Dusty Depot"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "Fatal Fields"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "Flush Factory"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "Greasy Grove"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "Haunted Hills"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "Junk Junction"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "Lonely Lodge"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "Loot Lake"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "Lucky Landing"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "Moisty Mire"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "Pleasant Park"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "Retail Row"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "Salty Springs"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "Shifty Shafts"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "Snobby Shores"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "Tilted Towers"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "Tomato Town"}
+{else if profile.vars.landing_spot == "wailing woods"}
+{fave_landing_spot = "Wailing Woods"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "Tipps und Tricks für die neue Saison"},
+{brace = "Mach dich bereit!"},
+{season_4 = "Saison 4 ist hier!"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae388a1ee09a.jpg"}
+
+{else if lang == 'ja'}
+{preheader = "シーズン3の実績を確認しましょう！"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = " " },
+{greeting_2 = "さん、こんにちは"},
+{intro = "「フォートナイト バトルロイヤル」シーズン3をプレイしていただき、ありがとうございます！ ロケットライド、宇宙飛行士、リプレイ動画、ダンスバトルなどで非常に満喫できました！ 以下であなたのシーズン3の実績を確認しましょう。"},
+{if profile.vars.playstyle== "soldier"}
+{playstyle = "ソルジャー"}
+{subject = "あなたはトップ" + playstyle + "です。シーズン3の統計データを確認しましょう！"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "敵を倒した回数(シーズン合計)"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "シングルマッチで敵を倒した回数(最大)"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "敵を倒した最長距離"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "ビルダー"}
+{subject = "あなたはトップ" + playstyle + "です。シーズン3の統計データを確認しましょう！"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "建築した建造物数(合計)"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "収集した素材数(合計)"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "トラップキル回数(合計)"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "スカウト"}
+{subject = "あなたはトップ" + playstyle + "です。シーズン3の統計データを確認しましょう！"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "訪れたマップの割合"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "移動距離(合計)"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "開いたアイテム数(合計)"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "ゲームプレイ回数(合計)"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "お気に入りの武器"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "アサルトライフル"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "サブマシンガン"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "マシンガン"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "リボルバー"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "ピストル"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "ハンドキャノン"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "ショットガン"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "スナイパーライフル"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "ハンティングライフル"}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "クロスボウ"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "ミニガン"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "ロケットランチャー"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "誘導ミサイル"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "グレネードランチャー"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "お気に入りの着地点"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "アナーキー・エーカー"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "ダスティ・デポ"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "フェイタル・フィールド"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "フラッシュ・ファクトリー"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "グリーシー・グローブ"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "ホーンテッド・ヒルズ"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "ジャンク・ジャンクション"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "ロンリー・ロッジ"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "ルート・レイク"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "ラッキー・ランディング"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "モイスティ・マイア"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "プレザント・パーク"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "リテイル・ロー"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "ソルティ・スプリングス"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "シフティ・シャフト"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "スノビー・ショア"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "ティルテッド・タワー"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "トマト・タウン"}
+{else if profile.vars.landing_spot == "wailing woods"}
+{fave_landing_spot = "ウェイリング・ウッズ"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "新シーズンのヒントとコツ"},
+{brace = "衝突に備えよ"},
+{season_4 = "シーズン4が登場！"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae396f110ee3.jpg"}
+
+{else if lang == 'ko'}
+{preheader = "시즌 3 업적을 확인하세요!"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "안녕하세요, "},
+{greeting_2 = "님"},
+{intro = "포트나이트 배틀로얄 시즌 3를 플레이해주셔서 감사합니다! 로켓 타기, 우주인, 리플레이 영상, 댄스 경연 대회 등 모두가 즐거운 시간이었습니다. 밑에서 여러분의 시즌 3 업적을 확인하세요!"},
+{if profile.vars.playstyle== "soldier"}
+{playstyle = "군인"}
+{subject = "플레이어님은 최고의 " + playstyle + "입니다. 시즌 3 전적을 확인하세요!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "이번 시즌 총 처치 횟수"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "한 경기 최다 처치 횟수"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "처치 최장 거리"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "건축가"}
+{subject = "플레이어님은 최고의 " + playstyle + "입니다. 시즌 3 전적을 확인하세요!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "총 건축한 구조물 수"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "총 수집한 재료 수"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "총 함정 처치 횟수"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "정찰대원"}
+{subject = "플레이어님은 최고의 " + playstyle + "입니다. 시즌 3 전적을 확인하세요!"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "방문한 맵 비율"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "총 이동 거리"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "총 탐색한 아이템 수"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "총 플레이한 경기 수"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "자주 사용하는 무기"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "돌격소총"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "기관단총"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "기관총"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "리볼버"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "권총"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "핸드캐논"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "산탄총"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "저격소총"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "사냥용 소총"}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "석궁"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "미니건"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "로켓 발사기"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "유도 미사일"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "수류탄 발사기"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "자주 가는 착지 지점"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "아나키 에이커"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "더스티 디포"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "페이탈 필드"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "플러시 팩토리"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "그리시 그로브"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "헌티드 힐"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "정크 정션"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "론리 랏지"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "루트 레이크"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "럭키 랜딩"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "모이스티 마이어"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "플레젠트 파크"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "리테일 로우"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "솔티 스프링"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "시프티 쉐프트"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "스노비 쇼어"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "틸티드 타워"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "토마토 타운"}
+{else if profile.vars.landing_spot == "wailing woods"}
+{fave_landing_spot = "웨일링 우드"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "새로운 시즌 맞이 팁 및 요령"},
+{brace = "새로운 충격과 변화에 대비하세요"},
+{season_4 = "시즌 4 참전의 시간이 왔습니다!"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae396f676406.jpg"}
+
+{else if lang == 'tr'}
+{preheader = "3. Sezonda neler başardığına göz at!"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "Merhaba "},
+{intro = "Fortnite Battle Royale 3. Sezon’da oynadığın için teşekkür ederiz! Roketlerle, astronotlarla, tekrar videolarıyla, dans atışmalarıyla ve diğer her şeyle çok eğlendik. 3. Sezon’daki başarılarının bazılarını aşağıda görebilirsin."},
+{if profile.vars.playstyle== "soldier"}
+{playstyle = "askersin"}
+{subject = "Usta bir " + playstyle + "! 3. Sezon’daki istatistiklerine bak!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "bu sezon toplam avlamaların"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "tek maçtaki en yüksek avlama sayın"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "bir rakibi avladığın en uzun mesafe"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "inşaatçısın"}
+{subject = "Usta bir " + playstyle + "! 3. Sezon’daki istatistiklerine bak!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "inşa ettiğin toplam yapılar"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "topladığın malzeme sayısı"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "tuzaklarla toplam avlamaların"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "izcisin"}
+{subject = "Usta bir " + playstyle + "! 3. Sezon’daki istatistiklerine bak!"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "haritanın yüzde kaçını gezdiğin"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "kat ettiğin toplam mesafe"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "bulunan toplam eşya"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "oynanan toplam oyun"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "favori silahın"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "Taarruz Tüfeği"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "Hafif Makineli Tüfek"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "Makineli Tüfek"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "Altıpatlar"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "Tabanca"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "Ağır Tabanca"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "Pompalı Tüfek"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "Keskin Nişancı Tüfeği"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "Av Tüfeği"}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "Arbalet"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "Mitralyöz"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "Roketatar"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "Kumandalı Füze"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "Bomba Atar"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "favori iniş alanın"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "Anarşik Arazi"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "Derbeder Depolar"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "Çileli Çiftlik"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "Sifon Sanayi"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "Kaygan Koru"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "Tekinsiz Tepeler"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "Çerçöp Çaprazı"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "Başıboş Baraka"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "Ganimet Gölü"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "Ballı Bölge"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "Boğuk Bataklık"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "Mutlu Mahalle"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "Perakende Pazarı"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "Kaynar Kaplıcalar"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "Dolambaçlı Dehlizler"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "Kibirli Kıyılar"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "Eğik Evler"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "Domates Diyarı"}
+{else if profile.vars.landing_spot == "Ağlayan Ağaçlık"}
+{fave_landing_spot = "Wailing Woods"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "yeni sezon için ipuçları"},
+{brace = "Çarpmaya hazırlanın"},
+{season_4 = "4. Sezon Başlıyor!"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae397052ddbf.jpg"}
+
+{else if lang == 'pt-br'}
+{preheader = "Veja suas façanhas na Temporada 3!"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "Olá, "},
+{intro = "Obrigado por jogar a Temporada 3 do Battle Royale do Fortnite! Nós nos divertimos muito com passeios de foguete, astronautas, vídeos de replay, batalhas de dança e muito mais. Veja abaixo algumas das suas façanhas na Temporada 3."},
+{if profile.vars.playstyle== "soldier"}
+{playstyle = "soldados"}
+{subject = "Você é um dos melhores " + playstyle + ", veja suas estatísticas da Temporada 3!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "total de eliminações nessa temporada"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "maior número de eliminações em uma única partida"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "eliminação à maior distância"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "construtores"}
+{subject = "Você é um dos melhores " + playstyle + ", veja suas estatísticas da Temporada 3!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "total de estruturas construídas"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "total de materiais coletados"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "total de eliminações com armadilhas"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "batedores"}
+{subject = "Você é um dos melhores " + playstyle + ", veja suas estatísticas da Temporada 3!"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "porcentagem visitada do mapa"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "distância total percorrida"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "total de itens vasculhados"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "total de partidas jogadas"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "arma favorita"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "Rifle de Assalto"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "Submetralhadora"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "Metralhadora"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "Revólver"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "Pistola"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "Canhão de Mão"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "Espingarda"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "Rifle de Precisão"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "Rifle de Caça"}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "Besta"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "Metralhadora Giratória"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "Lançador de Foguetes"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "Míssil Teleguiado"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "Lança-granadas"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "local de pouso favorito"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "Terras Anárquicas"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "Depósito Empoeirado"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "Campos Fatais"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "Fábrica de Descargas"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "Bosque Gorduroso"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "Colinas Assombradas"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "Cruzamento da Sucata"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "Cabana Solitária"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "Lago do Saque"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "Cidade da Sorte"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "Lamaçal Nebuloso"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "Parque Agradável"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "Via do Varejo"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "Fontes Salgadas"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "Minas Matreiras"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "Margens Esnobes"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "Torres Tortas"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "Cidade de Tomates"}
+{else if profile.vars.landing_spot == "wailing woods"}
+{fave_landing_spot = "Bosque Lamurioso"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "truques e dicas para a nova temporada"},
+{brace = "Prepare-se para o impacto"},
+{season_4 = "A Temporada 4 chegou!"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae396d0525e8.jpg"}
+
+{else if lang == 'it'}
+{preheader = "Dai un'occhiata ai tuoi risultati della Stagione 3!"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "Ciao "},
+{intro = "Grazie di aver giocato alla Stagione 3 della Battaglia reale di Fortnite. Ci siamo divertiti un sacco con i razzi, gli astronauti, i video di replay, le coreografie... e molto altro ancora. Da' un'occhiata ai risultati che hai ottenuto nella Stagione 3."},
+{if profile.vars.playstyle== "soldier"}
+{playstyle = "soldato"}
+{subject = "Sei nella Top " + playstyle + "! Dai un'occhiata alle statistiche della Stagione 3!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "eliminazioni totali di questa stagione"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "numero massimo di eliminazioni in una sola partita"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "eliminazione dalla distanza maggiore"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "costruttore"}
+{subject = "Sei nella Top " + playstyle + "! Dai un'occhiata alle statistiche della Stagione 3!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "strutture totali costruite"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "materiali totali raccolti"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "uccisioni con trappole totali"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "ricognitore"}
+{subject = "Sei nella Top " + playstyle + "! Dai un'occhiata alle statistiche della Stagione 3!"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "percentuale della mappa esplorata"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "distanza totale percorsa"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "oggetti totali trovati"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "partite totali giocate"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "arma preferita"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "Fucile d'assalto"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "Mitraglietta"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "Mitragliatore"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "Revolver"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "Pistola"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "Pistola pesante"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "Fucile pesante"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "Fucile di precisione"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "Fucile da caccia"}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "Balestra"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "Mitragliatrice"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "Lanciarazzi"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "Missile guidato"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "Lanciagranate"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "punto d'atterraggio preferito"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "Acri anarchici"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "Magazzino muffito"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "Lande Letali"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "Laboratorio della latrina"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "Boschetto bisunto"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "Montagnole maledette"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "Crocevia del Ciarpame"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "Rifugio ritirato"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "Sponde del saccheggio"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "Approdo avventurato"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "Putrido Pantano"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "Parco pacifico"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "Corso commercio"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "Borgo Bislacco"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "Condotti confusi"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "Spiagge snob"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "Torri inclinate"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "Tomato Town"}
+{else if profile.vars.landing_spot == "wailing woods"}
+{fave_landing_spot = "Bosco blaterante"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "alcuni suggerimenti per la nuova stagione"},
+{brace = "Preparatevi all'impatto"},
+{season_4 = "La Stagione 4 è QUI!"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae396eaa1526.jpg"}
+
+{else if lang == 'pl'}
+{preheader = "Sprawdź swoje osiągnięcia z sezonu 3!"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "Cześć  "},
+{intro = "Dziękujemy ci za grę w sezonie 3 Fortnite: Battle Royale! Ujeżdżanie rakiet, astronauci, powtórkowe klipy, bitwy taneczne i jeszcze więcej – to wszystko sprawiło, że było fantastycznie. Poniżej przeczytasz o niektórych swoich osiągnięciach."},
+{if profile.vars.playstyle== "soldier"}
+{playstyle = "żołnierz"}
+{subject = "Dominujesz w kategorii „" + playstyle + "” - sprawdź swoje statystyki z sezonu 3!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "łączna liczba likwidacji w sezonie"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "najwyższa liczba likwidacji w jednej grze"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "likwidacja z największego dystansu"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "budowniczy"}
+{subject = "Dominujesz w kategorii „" + playstyle + "” - sprawdź swoje statystyki z sezonu 3!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "łączna liczba zbudowanych budowli"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "łączna ilość zebranych zasobów"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "łączna liczba zabójstw przy użyciu pułapek"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "zwiadowca"}
+{subject = "Dominujesz w kategorii „" + playstyle + "” - sprawdź swoje statystyki z sezonu 3!"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "odwiedzony procent mapy"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "łączny pokonany dystans"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "łączna liczba przeszukanych przedmiotów"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "łączna liczba gier"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "ulubiona broń"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "Karabin szturmowy"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "Pistolet maszynowy"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "Karabin maszynowy"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "Rewolwer"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "Pistolet"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "Rękodziało"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "Strzelba"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "Karabin snajperski"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "Sztucer"}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "Kusza"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "Minigun"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "Wyrzutnia rakiet"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "Rakieta Kierowana"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "Granatnik"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "ulubione miejsce lądowania"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "Akry Anarchii"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "Stęchły Skład"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "Zgubne Ziemie"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "Spawalnia Spłuczek"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "Lepki Lasek"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "Widmowe Wzgórza"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "Rozdroża Rupieci"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "Samotne Schronisko"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "Zalew Zdobyczy"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "Pagody Pomyślności"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "Mokre Moczary"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "Przyjemny Park"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "Sklepowa Sadyba"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "Słone Strzechy"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "Szemrane Szyby"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "Butny Brzeg"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "Wykrzywione Wieże"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "Pomidorowy Przysiółek"}
+{else if profile.vars.landing_spot == "wailing woods"}
+{fave_landing_spot = "Płacząca Puszcza"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "wskazówki i triki na nowy sezon"},
+{brace = "Szykuj się na uderzenie"},
+{season_4 = "Sezon 4 już trwa!"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae396fb9f6bd.jpg"}
+
+{else if lang == 'es-es'}
+{preheader = "¡Mira tus logros de la temporada 3!"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "Hola "},
+{intro = "¡Gracias por jugar a la temporada 3 de Battle Royale de Fortnite! Nos lo hemos pasado en grande montando en cohete, siendo astronautas, viendo repeticiones, haciendo competiciones de baile y mucho más. Echa un vistazo a algunos de tus logros de la temporada 3 a continuación."},
+{if profile.vars.playstyle == "soldier"}
+{playstyle = "soldado"}
+{subject = "Eres un " + playstyle + " de primera, ¡mira tus estadísticas de la temporada 3!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "asesinatos totales durante la temporada"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "mayor número de asesinatos en una misma partida"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "asesinato a mayor distancia"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "constructor"}
+{subject = "Eres un " + playstyle + " de primera, ¡mira tus estadísticas de la temporada 3!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "total de estructuras construidas"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "total de materiales recolectados"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "total de asesinatos con trampas"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "explorador"}
+{subject = "Eres un " + playstyle + " de primera, ¡mira tus estadísticas de la temporada 3!"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "porcentaje del mapa visitado"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "distancia total recorrida"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "total de objetos registrados"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "total de partidas jugadas"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "arma favorita"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "Fusil de asalto"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "Subfusil"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "Ametralladora"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "Revólver"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "Pistola"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "Pistola pesada"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "Escopeta"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "Fusil de tirador"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "Fusil de caza"}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "Ballesta"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "Minigun"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "Lanzacohetes"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "Misil teledirigido"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "Lanzagranadas"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "lugar de aterrizaje favorito"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "Acres Anárquicos"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "Polvorín Polvoriento"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "Latifundio Letal"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "Industrias Inodoras"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "Caserío Colesterol"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "Lomas Lúgubres"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "Chiringuito Chatarra"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "Soto Solitario"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "Balsa Botín"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "Aterrizaje Afortunado"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "Charca Chorreante"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "Parque Placentero"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "Ciudad Comercio"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "Señorío de la Sal"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "Túneles Tortuosos"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "Ribera Repipi"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "Pisos Picados"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "Pueblo Tomate"}
+{else if profile.vars.landing_spot == "wailing woods"}
+{fave_landing_spot = "Alameda Aullante"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "consejos y trucos para la nueva temporada"},
+{brace = "Prepárate para el impacto"},
+{season_4 = "¡Ya está aquí la temporada 4!"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae396d77a981.jpg"}
+
+{else if lang == 'es-mx'}
+{preheader = "¡Echa un vistazo a tus logros de la temporada 3!"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "Hola "},
+{intro = "¡Gracias por jugar la temporada 3 de Batalla campal de Fortnite! Nos divertimos muchísimo con los paseos en cohete, los astronautas, las repeticiones, las batallas de baile y muchas otras cosas más. Echa un vistazo a algunos de tus logros de la temporada 3 abajo."},
+{if profile.vars.playstyle== "soldier"}
+{playstyle = "soldado"}
+{subject = "¡Eres un excelente “ + playstyle + “ echa un vistazo a tus estadísticas de la temporada 3!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "total de eliminaciones esta temporada"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "mayor cantidad de eliminaciones en una partida"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "eliminación a mayor distancia"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "constructor"}
+{subject = "¡Eres un excelente “ + playstyle + “ echa un vistazo a tus estadísticas de la temporada 3!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "total de estructuras construidas"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "total de materiales recolectados"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "total de eliminaciones con trampa"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "explorador"}
+{subject = "¡Eres un excelente “ + playstyle + “ echa un vistazo a tus estadísticas de la temporada 3!"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "porcentaje del mapa visitado"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "total de distancia recorrida"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "total de objetos registrados"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "total de partidas jugadas"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "arma favorita"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "Rifle de asalto"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "Subfusil"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "Ametralladora"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "Revólver"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "Pistola"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "Cañón de mano"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "Escopeta"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "Rifle de francotirador"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "Rifle de caza"}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "Ballesta"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "Ametralladora"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "Lanzacohetes"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "Misil teledirigido"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "Lanzagranadas"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "lugar de aterrizaje favorito"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "Acres Anárquicos"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "Almacenes Andrajosos"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "Terreno Tormentoso"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "Fábrica Funcional"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "Arboleda Aceitosa"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "Lomas Lúgubres"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "Cruce Chatarra"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "Casas Cabañiles"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "Balsa Botín"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "Aterrizaje Afortunado"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "Ciénaga Chorreante"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "Parque Placentero"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "Metrópoli Mercantil"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "Salpiconeros Salados"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "Conductos Cambiantes"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "Costas Clasistas"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "Rascacielos Recostados"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "Pueblo Pomodoro"}
+{else if profile.vars.landing_spot == "wailing woods"}
+{fave_landing_spot = "Alameda Aullante"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "consejos y trucos para la nueva temporada"},
+{brace = "¡Prepárate para el impacto!"},
+{season_4 = "¡La temporada 4 ya está aquí!"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae396dd89349.jpg"}
+
+{else if lang == 'ru'}
+{preheader = "Узнайте, чего вы добились в третьем сезоне!"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "Привет "},
+{intro = "Спасибо, что участвовали в третьем сезоне «Королевской битвы» Fortnite! Полёты на ракетах, космонавты, повторы, танцевальные битвы и не только — в общем, было весело. Узнайте, чего вы добились за сезон."}
+{if profile.vars.playstyle== "soldier"}
+{playstyle = "солдат"}
+{subject = "Вы — в числе лучших “ + playstyle + “ Fortnite! Посмотрите, чего вы добились в третьем сезоне!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "устранено врагов за сезон"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "максимум устранено за один матч"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "максимальная дистанция устранения"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "строителей"}
+{subject = "Вы — в числе лучших “ + playstyle + “ Fortnite! Посмотрите, чего вы добились в третьем сезоне!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "возведено построек"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "собрано материалов"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "убийств с помощью ловушек"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "разведчиков"}
+{subject = "Вы — в числе лучших “ + playstyle + “ Fortnite! Посмотрите, чего вы добились в третьем сезоне!"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "доля карты, где вы побывали"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "пройденное расстояние"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "обыскано предметов"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "сыграно матчей"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "любимое оружие"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "Автомат"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "Пистолет-пулемёт"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "Пулемёт"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "Револьвер"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "Пистолет"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "Тяжёлый пистолет"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "Дробовик"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "Снайперская винтовка"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "Охотничья винтовка"}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "Арбалет"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "Миниган"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "Ракетница"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "Управляемая ракета"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "Гранатомёт"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "любимое место высадки"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "Акры Анархии"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "Старый склад"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "Поля погибели"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "Фабрика фаянса"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "Засаленная закусочная"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "Хмурые холмы"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "Стихийная свалка"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "Далёкий домик"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "Подлый пруд"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "Китайский квартал"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "Топкая трясина"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "Приятный парк"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "Торговая точка"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "Колкие ключи"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "Шаткие шахты"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "Богатый берег"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "Брошенные башни"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "Пос. Помидоровка"}
+{else if profile.vars.landing_spot == "wailing woods"}
+{fave_landing_spot = "Ревущая роща"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "полезные советы для нового сезона"},
+{brace = "Готовьтесь к столкновению"},
+{season_4 = "Четвёртый сезон начался!"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae3970096b44.jpg"}
+
+{else if lang == 'fr'}
+{preheader = "Découvrez vos exploits dans la saison 3 !"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "Bonjour "},
+{intro = "Merci d'avoir joué à la saison 3 de Fortnite Battle Royale ! On s'est bien amusé avec le surf sur roquette, les astronautes, les rediffusions et les batailles de danse. Découvrez quelques-uns de vos exploits dans la saison 3 ci-dessous."},
+{if profile.vars.playstyle == "soldier"}
+{playstyle = "le combat"}
+{subject = "Votre spécialité ? " + playstyle + " ! Consultez vos stats de la saison 3 !"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "total des éliminations cette saison"}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "plus grand nombre d'éliminations en une seule partie"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "plus longue distance d'élimination"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "La construction"}
+{subject = "Votre spécialité ? " + playstyle + " ! Consultez vos stats de la saison 3 !"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "total des structures construites"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "total des matériaux collectés"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "total des éliminations avec un piège"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "La reconnaissance"}
+{subject = "Votre spécialité ? " + playstyle + "! Consultez vos stats de la saison 3 !"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "pourcentage de la carte visité"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "distance totale parcourue"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "total des objets fouillés"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "total des parties jouées"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "arme préférée"},
+{if profile.vars.favorite_weapon == "assault rifle"}
+{favorite_weapon = "Fusil d'assaut"}
+{else if profile.vars.favorite_weapon == "submachine gun"}
+{favorite_weapon = "Pistolet-mitrailleur"}
+{else if profile.vars.favorite_weapon == "machine gun"}
+{favorite_weapon = "Mitrailleuse"}
+{else if profile.vars.favorite_weapon == "revolver"}
+{favorite_weapon = "Revolver"}
+{else if profile.vars.favorite_weapon == "pistol"}
+{favorite_weapon = "Pistolet"}
+{else if profile.vars.favorite_weapon == "hand cannon"}
+{favorite_weapon = "Bourlingueur"}
+{else if profile.vars.favorite_weapon == "shotgun"}
+{favorite_weapon = "Fusil à pompe"}
+{else if profile.vars.favorite_weapon == "sniper rifle"}
+{favorite_weapon = "Fusil de sniper"}
+{else if profile.vars.favorite_weapon == "hunting rifle"}
+{favorite_weapon = "Fusil de chasse "}
+{else if profile.vars.favorite_weapon == "crossbow"}
+{favorite_weapon = "Arbalète"}
+{else if profile.vars.favorite_weapon == "minigun"}
+{favorite_weapon = "Minigun"}
+{else if profile.vars.favorite_weapon == "rocket launcher"}
+{favorite_weapon = "Lance-roquettes"}
+{else if profile.vars.favorite_weapon == "guided missile"}
+{favorite_weapon = "Missile guidé"}
+{else if profile.vars.favorite_weapon == "grenade launcher"}
+{favorite_weapon = "Lance-grenades"}
+{/if}
+{favorite_weapon_var = favorite_weapon},
+{landing_spot_stat = "lieu d'atterrissage préféré"},
+{if profile.vars.landing_spot == "anarchy acres"}
+{fave_landing_spot = "Anarchy Acres"}
+{else if profile.vars.landing_spot == "dusty depot"}
+{fave_landing_spot = "Dusty Depot"}
+{else if profile.vars.landing_spot == "fatal fields"}
+{fave_landing_spot = "Fatal Fields"}
+{else if profile.vars.landing_spot == "flush factory"}
+{fave_landing_spot = "Flush Factory"}
+{else if profile.vars.landing_spot == "greasy grove"}
+{fave_landing_spot = "Greasy Grove"}
+{else if profile.vars.landing_spot == "haunted hills"}
+{fave_landing_spot = "Haunted Hills"}
+{else if profile.vars.landing_spot == "junk junction"}
+{fave_landing_spot = "Junk Junction"}
+{else if profile.vars.landing_spot == "lonely lodge"}
+{fave_landing_spot = "Lonely Lodge"}
+{else if profile.vars.landing_spot == "loot lake"}
+{fave_landing_spot = "Loot Lake"}
+{else if profile.vars.landing_spot == "lucky landing"}
+{fave_landing_spot = "Lucky Landing"}
+{else if profile.vars.landing_spot == "moisty mire"}
+{fave_landing_spot = "Moisty Mire"}
+{else if profile.vars.landing_spot == "pleasant park"}
+{fave_landing_spot = "Pleasant Park"}
+{else if profile.vars.landing_spot == "retail row"}
+{fave_landing_spot = "Retail Row"}
+{else if profile.vars.landing_spot == "salty springs"}
+{fave_landing_spot = "Salty Springs"}
+{else if profile.vars.landing_spot == "shifty shafts"}
+{fave_landing_spot = "Shifty Shafts"}
+{else if profile.vars.landing_spot == "snobby shores"}
+{fave_landing_spot = "Snobby Shores"}
+{else if profile.vars.landing_spot == "titled towers"}
+{fave_landing_spot = "Tilted Towers"}
+{else if profile.vars.landing_spot == "tomato town"}
+{fave_landing_spot = "Tomato Town"}
+{else if profile.vars.landing_spot == "wailing woods"}
+{fave_landing_spot = "Wailing Woods"}
+{/if}
+{landing_spot_var = fave_landing_spot},
+{tips_and_tricks = "trucs et astuces pour la nouvelle saison"},
+{brace = "Préparez-vous à l'impact"},
+{season_4 = "La saison 4 commence !"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/r/5ae396e561e90.jpg"}
+
+{else}
+{preheader = "Check out your accomplishments from Season 3!"},
+{header_image = "https://media.sailthru.com/5m9/1k2/4/q/5ae227807bfb9.jpg"},
+{greeting = "Hi "},
+{intro = "Thanks for playing Fortnite Battle Royale Season 3! We had a blast with rocket rides, astronauts, replay videos, dance battles and more. Check out some of your accomplishments from Season 3 below."},
+{if profile.vars.playstyle== "soldier"}
+{playstyle = "soldier"}
+{subject = "You’re A Top " + playstyle + ", Check Out Your Season 3 Stats!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7c3962f6.jpg"}
+{playstyle_stat_1 = "total eliminations this season "}
+{playstyle_var_1 = profile.vars.total_eliminations}
+{playstyle_stat_2 = "highest number of eliminations in a single match"}
+{playstyle_var_2 = profile.vars.highest_eliminations}
+{playstyle_stat_3 = "longest distance elimination"}
+{playstyle_var_3 = profile.vars.longest_distance}
+{else if profile.vars.playstyle == "builder"}
+{playstyle = "builder"}
+{subject = "You’re A Top " + playstyle + ", Check Out Your Season 3 Stats!"},
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7b2be7a5.jpg"}
+{playstyle_stat_1 = "total structures built"}
+{playstyle_var_1 = profile.vars.total_structures}
+{playstyle_stat_2 = "total materials collected"}
+{playstyle_var_2 = profile.vars.total_materials}
+{playstyle_stat_3 = "total trap kills"}
+{playstyle_var_3 = profile.vars.trap_kills}
+{else}
+{playstyle = "scout"}
+{subject = "You’re A Top " + playstyle + ", Check Out Your Season 3 Stats!"}
+{playstyle_image = "https://media.sailthru.com/5m9/1k2/4/s/5ae4b7bc38c6e.jpg"}
+{playstyle_stat_1 = "percent of map visited"}
+{playstyle_var_1 = profile.vars.percent_visited}
+{playstyle_stat_2 = "total distance traveled"}
+{playstyle_var_2 = profile.vars.distance_traveled}
+{playstyle_stat_3 = "total items searched"}
+{playstyle_var_3 = profile.vars.items_searched}
+{/if}
+{total_games_stat = "total games played"},
+{total_games_var = profile.vars.games_played},
+{favorite_weapon_stat = "favorite weapon "},
+{favorite_weapon_var = profile.vars.favorite_weapon},
+{landing_spot_stat = "favorite landing spot"},
+{landing_spot_var = profile.vars.landing_spot},
+{tips_and_tricks = "tips & tricks for the new season"},
+{brace = "Brace for Impact"},
+{season_4 = "Season 4 is Here!"}
+{play_now = "https://media.sailthru.com/5m9/1k2/4/q/5ae22831bdec6.jpg"}
