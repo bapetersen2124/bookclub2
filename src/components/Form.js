@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styling/Form.css';
-import $ from 'jquery';
+import TimelineLite from 'gsap/TimelineLite';
+import Nav from './Nav.js';
 
 export default class Form extends Component {
   constructor(props) {
@@ -11,20 +12,22 @@ export default class Form extends Component {
     }
   }
 
-  componentDidMount = () => {
-    $("#cancel, #submit").click(function() {
-      window.TweenMax.to(".menu, .icon", 1, {
-        width: "100%"
-      })
-    })
-    $("#cancel, #submit").click(function() {
-      window.TweenMax.to(".form", 0, {
-        width: "50%",
-        display: "inline",
-        autoAlpha: 0,
-      })
-   })
-}
+  toShrink = () => {
+    const tl = new TimelineLite()
+
+    tl.to(".form", 0, {
+            width: "50%",
+            display: "inline",
+            autoAlpha: 0
+        })
+      .to(".menu, .icon", 0, {
+        width: "100%",
+        })
+      .to(".nav-background", 1, {
+        width: "30%",
+        zIndex: -1
+        })
+      }
 
   handleChange = (e) => {
     this.setState({
@@ -72,7 +75,7 @@ export default class Form extends Component {
                 <tr className="tr-style">
                   <td className="td-style"></td>
                   <td className="center">
-                    <button id="cancel" className="button-style">Cancel</button>
+                    <button id="cancel" className="button-style" onClick={this.toShrink}>Cancel</button>
                     <button id="submit" className="button-style" type="submit" onClick={this.handleSubmit.bind(this)}>Submit</button>
                   </td>
                   <td className="td-style"></td>

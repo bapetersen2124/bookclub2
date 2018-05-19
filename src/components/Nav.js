@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Sticky from 'react-stickynode';
 import '../styling/Nav.css';
-import $ from 'jquery';
+import TimelineLite from 'gsap/TimelineLite';
+import { TweenMax } from 'gsap';
+
 
 export default class Nav extends Component {
   constructor(props) {
@@ -9,73 +11,46 @@ export default class Nav extends Component {
     this.state = {}
   }
 
-  componentDidMount = () => {
-    $(".form-fill").click(function() {
-      window.TweenMax.to(".nav-background", 1, {
-        width: "100%",
-        zIndex: 3
+  expandNav = () => {
+    const tl = new TimelineLite()
+
+    tl.to(".nav-background", 1, {width: "100%",})
+      .to(".menu", .25, {delay: .05})
+      .fromTo(".icon", 1, {margin: 0,}, {
+        margin: 0,
+        width: "30%",
       })
-    })
-    // $(".form-fill").click(function() {
-    //   window.TweenMax.to(".grid", 1, {
-    //     width: "100%",
-    //     zIndex: -1,
-    //     delay: -.5
-    //   })
-    // })
-    $(".form-fill").click(function() {
-      window.TweenMax.to(".menu", 1, {
-      }, {
-        delay: 1.25
+      .to(".form", 1, {
+        width: "50%",
+        display: "inline",
+        autoAlpha: 1,
+        delay: .05,
       })
-    })
-    $(".form-fill").click(function() {
-      window.TweenMax.fromTo(".icon", 1, {
+      .fromTo(".icon", 1, {
         margin: 0,
       }, {
         margin: 0,
         width: "30%",
-        delay: 1.25
+        delay: .15
       })
-    })
-  $(".form-fill").click(function() {
-     window.TweenMax.to(".form", 1, {
-       width: "50%",
-       display: "inline",
-       autoAlpha: 1,
-       delay: 1.5,
-       zIndex: 3
-     })
-  })
-  $("#cancel, #submit").click(function() {
-    window.TweenMax.to(".nav-background", 1, {
-      width: "30%",
-      zIndex: -1
-    })
-  })
-  // $("#cancel, #submit").click(function() {
-  //   window.TweenMax.to(".grid", 1, {
-  //     display: "inline-block",
-  //     margin: "2.5% auto",
-  //     position: "relative",
-  //     overflow: "hidden",
-  //     delay: 1.75,
-  //     zIndex: 1
-  //   })
-  // })
-  $(".nav-item").mouseover(function() {
-    window.TweenMax.to($(this), .5, {
+  }
+
+  navIndent = (e) => {
+    window.TweenMax.to(e.currentTarget, .5, {
       marginLeft: "10px"
     })
-  })
-  $(".nav-item").mouseout(function() {
-    window.TweenMax.to($(this), .5, {
-      marginLeft: "0px"
-    })
-  })
-}
+  }
+
+  navRemoveIndent = (e) => {
+    window.TweenMax.to(e.currentTarget, .5, {
+        marginLeft: "0px"
+      })
+  }
 
   render() {
+
+    const VisibilitySensor = require('react-visibility-sensor');
+
     return(
       <Sticky enabled={this.props.enabled} top={this.props.top}>
         <div className="nav-background">
@@ -86,10 +61,10 @@ export default class Nav extends Component {
           <div>&nbsp;</div>
           <div className="menu">
             <ul>
-              <li className="nav-item">Home</li>
-              <li className="form-fill nav-item">Add a Listing</li>
-              <li className="nav-item">Search By Category</li>
-              <li className="nav-item">Search By User</li>
+              <li className="nav-item" onMouseOver={this.navIndent} onMouseOut={this.navRemoveIndent}>Home</li>
+              <li id="form-fill" className="nav-item" onClick={this.expandNav} onMouseOver={this.navIndent} onMouseOut={this.navRemoveIndent}>Add a Listing</li>
+              <li className="nav-item" onMouseOver={this.navIndent} onMouseOut={this.navRemoveIndent}>Search By Category</li>
+              <li className="nav-item" onMouseOver={this.navIndent} onMouseOut={this.navRemoveIndent}>Search By User</li>
             </ul>
           </div>
           <div>

@@ -17,32 +17,37 @@
   overflow: hidden;
 }
 
-.grid-sizer, .grid-item {
-  height: 100px;
-  width: 100px;
+.grid-item {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   overflow: hidden;
-  display: inline;
-  position: relative;
-  padding: 1px;
-  margin: 0 auto;
+  display: inline-block;
+  /* position: relative; */
+  margin: 0px 5px 0px 0px;
 }
 
-.genre-back {
-  background-color: rgba(25, 25, 25, 0.9);
-  height: 95px;
-  width: 95px;
-  color: #ede7e3;
-  position: absolute;
-  margin-top: -100px;
-  text-align: center;
-  visibility: hidden;
+.grid-item:hover .genre-back {
+  background-color: rgba(34, 34, 34, 0.9);
+  transform: skewX(45deg);
+  margin-top: -100%;
+  animation: fromBottom .25s;
+  display: inline;
 }
 
 .genre-text {
-  font-size: 8px;
+  display: inline;
+  color: #ede7e3;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 90%;
+  letter-spacing: 1.1px;
+  transform: skewX(-45deg);
   margin: 0 auto;
+  padding-left: 5%;
 }
+
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .grid-sizer, .grid-item {
@@ -52,13 +57,40 @@
 
   .genre-back {
     height: 45px;
-    width: 45px;
-    margin-top: -45px;
+    width: 60px;
+    margin-left: -25px;
   }
 
   .genre-text {
-    font-size: .6rem;
-    padding: 30% 5%;
+    font-size: .4rem;
+    padding: 45% 37.5%;
+  }
+
+  .genre-hover:hover .genre-back {
+    max-height: 45px;
+    max-width: 45px;
+  }
+
+  @keyframes fromBottom {
+    0% {
+      margin-left: -45px;
+    }
+
+    25% {
+      margin-left: -40px;
+    }
+
+    50% {
+      margin-left: -35px;
+    }
+
+    75% {
+      margin-left: -30px;
+    }
+
+    100% {
+      margin-left: -25px;
+    }
   }
 }
 
@@ -70,13 +102,40 @@
 
   .genre-back {
     height: 60px;
-    width: 60px;
-    margin-top: -60px;
+    width: 80px;
+    margin-left: -30px;
   }
 
   .genre-text {
-    font-size: .8rem;
-    padding: 32.5% 5%;
+    font-size: .6rem;
+    padding: 40% 35%;
+  }
+
+  .genre-hover:hover .genre-back {
+    height: 60px;
+    width: 60px;
+  }
+
+  @keyframes fromBottom {
+    0% {
+      margin-left: -50px;
+    }
+
+    25% {
+      margin-left: -45px;
+    }
+
+    50% {
+      margin-left: -40px;
+    }
+
+    75% {
+      margin-left: -35px;
+    }
+
+    100% {
+      margin-left: -30px;
+    }
   }
 }
 
@@ -88,13 +147,40 @@
 
   .genre-back {
     height: 75px;
-    width: 75px;
-    margin-top: -75px;
+    width: 100px;
+    margin-left: -40px;
   }
 
   .genre-text {
-    font-size: .9rem;
-    padding: 35% 5%;
+    font-size: .7rem;
+    padding: 40% 37.5%;
+  }
+
+  .genre-hover:hover .genre-back {
+    height: 75px;
+    width: 75px;
+  }
+
+  @keyframes fromBottom {
+    0% {
+      margin-left: -60px;
+    }
+
+    25% {
+      margin-left: -55px;
+    }
+
+    50% {
+      margin-left: -50px;
+    }
+
+    75% {
+      margin-left: -45px;
+    }
+
+    100% {
+      margin-left: -40px;
+    }
   }
 }
 
@@ -106,13 +192,40 @@
 
   .genre-back {
     height: 95px;
-    width: 95px;
-    margin-top: -95px;
+    width: 120px;
+    margin-left: -50px;
   }
 
   .genre-text {
-    font-size: .9rem;
-    padding: 35% 5%;
+    font-size: .8rem;
+    padding: 40% 40%;
+  }
+
+  .genre-hover:hover .genre-back {
+    height: 95px;
+    width: 95px;
+  }
+
+  @keyframes fromBottom {
+    0% {
+      margin-left: -70px;
+    }
+
+    25% {
+      margin-left: -65px;
+    }
+
+    50% {
+      margin-left: -60px;
+    }
+
+    75% {
+      margin-left: -55px;
+    }
+
+    100% {
+      margin-left: -50px;
+    }
   }
 }
 
@@ -124,13 +237,40 @@
 
   .genre-back {
     height: 110px;
-    width: 110px;
-    margin-top: -110px;
+    width: 160px;
+    margin-left: -55px;
   }
 
   .genre-text {
-    font-size: 1.25rem;
-    padding: 37.5% 5%;
+    font-size: 1rem;
+    padding: 40% 35%;
+  }
+
+  .genre-hover:hover .genre-back {
+    height: 110px;
+    width: 110px;
+  }
+
+  @keyframes fromBottom {
+    0% {
+      margin-left: -75px;
+    }
+
+    25% {
+      margin-left: -70px;
+    }
+
+    50% {
+      margin-left: -65px;
+    }
+
+    75% {
+      margin-left: -60px;
+    }
+
+    100% {
+      margin-left: -55px;
+    }
   }
 }
 
@@ -142,13 +282,40 @@
 
   .genre-back {
     height: 130px;
-    width: 130px;
-    margin-top: -130px;
+    width: 200px;
+    margin-left: -65px;
   }
 
   .genre-text {
-    font-size: 1.5rem;
-    padding: 37.5% 5%;
+    font-size: 1.25rem;
+    padding: 40% 30%;
+  }
+
+  .genre-hover:hover .genre-back {
+    height: 130px;
+    width: 130px;
+  }
+
+  @keyframes fromBottom {
+    0% {
+      margin-left: -85px;
+    }
+
+    25% {
+      margin-left: -80px;
+    }
+
+    50% {
+      margin-left: -75px;
+    }
+
+    75% {
+      margin-left: -70px;
+    }
+
+    100% {
+      margin-left: -65px;
+    }
   }
 }
 
@@ -160,13 +327,40 @@
 
   .genre-back {
     height: 160px;
-    width: 160px;
-    margin-top: -160px;
+    width: 200px;
+    margin-left: -80px;
   }
 
   .genre-text {
-    font-size: 2rem;
-    padding: 40% 5%;
+    font-size: 1.65rem;
+    padding: 40% 40%;
+  }
+
+  .genre-hover:hover .genre-back {
+    height: 160px;
+    width: 160px;
+  }
+
+  @keyframes fromBottom {
+    0% {
+      margin-left: -105px;
+    }
+
+    25% {
+      margin-left: -100px;
+    }
+
+    50% {
+      margin-left: -95px;
+    }
+
+    75% {
+      margin-left: -90px;
+    }
+
+    100% {
+      margin-left: -85px;
+    }
   }
 }
 
@@ -178,21 +372,48 @@
 
   .genre-back {
     height: 200px;
+    width: 260px;
+    margin-left: -100px;
+  }
+
+  .genre-hover:hover .genre-back {
+    height: 200px;
     width: 200px;
-    margin-top: -200px;
   }
 }
 
 @media screen and (min-width: 1750px) and (max-width: 1999px) {
   .genre-text {
     font-size: 2rem;
-    padding: 40% 5%;
+    padding: 40% 40%;
   }
 }
 
 @media screen and (min-width: 2000px) {
   .genre-text {
-    font-size: 3rem;
-    padding: 42.5% 5%;
+    font-size: 2.25rem;
+    padding: 42.5% 37.5%;
+  }
+
+  @keyframes fromBottom {
+    0% {
+      margin-left: -125px;
+    }
+
+    25% {
+      margin-left: -120px;
+    }
+
+    50% {
+      margin-left: -115px;
+    }
+
+    75% {
+      margin-left: -110px;
+    }
+
+    100% {
+      margin-left: -105px;
+    }
   }
 }

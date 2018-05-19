@@ -27,12 +27,15 @@
   width: 100%;
 }
 
+.image-icon-invisible {
+  visibility: hidden;
+}
+
 .image-icon {
   width: 12.5%;
-  height: auto;
+  margin: 2% 6%;
   padding: 0% 2%;
   position: relative;
   z-index: 0;
-  margin: 6%;
   display: inline-block;
 }

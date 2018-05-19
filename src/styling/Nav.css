@@ -3,6 +3,7 @@
   height: fit-content;
   width: 30%;
   margin: 0;
+  /* z-index: 3; */
   margin-top: 10%;
   position: absolute;
   text-decoration: none;
@@ -24,7 +25,6 @@
   position: relative;
   list-style: none;
   text-align: center;
-  /* letter-spacing: .1em; */
   padding: 0;
   margin-left: 0%;
 }
@@ -42,7 +42,7 @@ ul {
   font-size: 1.15rem;
   color: #f5f1e4;
   text-decoration: none;
-  position: relative;
+  /* position: relative; */
   list-style: none;
   text-align: left;
   letter-spacing: .1em;
