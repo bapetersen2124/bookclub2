@@ -1,0 +1,17 @@
+version: '2.2'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: book_club_python_postgres
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: book_club
+      POSTGRES_DB: book_club_dev
+    volumes:
+      - ./tmp/postgresql:/var/lib/postgresql:rw
+      - ./etc/postgres-init:/docker-entrypoint-initdb.d
